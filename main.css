@@ -1,0 +1,26 @@
+body{
+    background-color: teal;
+}
+#Title2020{
+    text-align: center;
+    color: white;
+}
+#Title2020 h1{
+    font-size: 8rem;
+    text-shadow: 0.1em 0.1em 0.2em black /*文字陰影 模糊版本 */
+}
+.animation{
+    margin: auto;
+}
+.animation div{
+    margin: auto;
+}
+.countDownSpace{
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+.time{
+    background-color: red;
+    font-size: 10em;
+}
