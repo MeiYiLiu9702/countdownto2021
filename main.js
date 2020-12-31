@@ -56,6 +56,7 @@ function checkTime(){
                     ).html('<video autoplay width="100%"><source src="fireworks_video.mp4" type="video/mp4"></video>')
                 )
         )
+        break
 
     }
 }
