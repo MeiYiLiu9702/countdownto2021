@@ -39,12 +39,16 @@ function updateTime(){
 }
 function checkTime(){
     var now = new Date();
+    countDown();
     if(rest >= 0){
         updateTime();
         setInterval(updateTime,1000);
         countDown();
         setInterval(countDown,1000);
-        setInterval(checkTime,1000);
+        var doo = setInterval(checkTime,1000);
+        if(rest < 0){
+            clearInterval(doo) 
+        }
     }else{
         $('.container').html(
             '<audio src="HappyNewYearSong.mp3" autoplay loop></audio>'
@@ -56,8 +60,7 @@ function checkTime(){
                     ).html('<video autoplay width="100%"><source src="fireworks_video.mp4" type="video/mp4"></video>')
                 )
         )
-        break
-
+        console.log('here!')
     }
 }
     
