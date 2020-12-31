@@ -11,7 +11,7 @@ function countDown(){
 
 // content
 function title(){
-    $("#Title2020").append(
+    $(".Title2020").append(
         $('<h1>').html(String("迎接2021" +'</br>'+ "自己的煙火自己放"))
     )
 }
@@ -36,30 +36,36 @@ function updateTime(){
         )
 
         );
-        while(rest == 82520){
-            $('.container').html(
-                '<audio src="HappyNewYearSong.mp3" autoplay loop></audio>'
+}
+function checkTime(){
+    var now = new Date();
+    if(rest >= 0){
+        updateTime();
+        setInterval(updateTime,1000);
+        countDown();
+        setInterval(countDown,1000);
+        setInterval(checkTime,1000);
+    }else{
+        $('.container').html(
+            '<audio src="HappyNewYearSong.mp3" autoplay loop></audio>'
+            ).append(
+                $('<div>').addClass('Title2020').append(
+                    $('<h1>').html(String("Happy New Year!!!"))
                 ).append(
-                    $('<div>').addClass('animation2').html(String("Happy New Year!!!"))
-            )
-            break;
-        }
+                    $('<div>'
+                    ).html('<video autoplay width="100%"><source src="fireworks_video.mp4" type="video/mp4"></video>')
+                )
+        )
+
+    }
 }
     
 $(function(){
     // time check
     var now = new Date()
-    if(now != endTime){
-        title();
-        updateTime();
-        setInterval(updateTime,1000);
-        countDown();
-        setInterval(countDown,1000);
-    }else{
-        console.log('It is too late. Please look forward for next year.')
-    }
-    
-    
+    title();
+    checkTime();
+
 });
 
 
