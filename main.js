@@ -39,7 +39,7 @@ function updateTime(){
 }
 function checkTime(){
     var now = new Date();
-    if(rest >= 3350){
+    if(rest >= 0){
         updateTime();
         setInterval(updateTime,1000);
         countDown();
