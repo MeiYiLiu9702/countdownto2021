@@ -36,11 +36,14 @@ function updateTime(){
         )
 
         );
-        while(rest == 82520){
+        while(rest == 0){
             $('.container').html(
                 '<audio src="HappyNewYearSong.mp3" autoplay loop></audio>'
                 ).append(
-                    $('<div>').addClass('animation2').html(String("Happy New Year!!!"))
+                    $('<div>').addClass('animation2'
+                    ).append(
+                        $('<h1>').addClass('time').html(String("Happy New Year!!!"))
+                    )
             )
             break;
         }
