@@ -1,11 +1,11 @@
 body{
     background-color: teal;
 }
-#Title2020{
+.Title2020{
     text-align: center;
     color: white;
 }
-#Title2020 h1{
+.Title2020 h1{
     font-size: 8rem;
     text-shadow: 0.1em 0.1em 0.2em black /*文字陰影 模糊版本 */
 }
